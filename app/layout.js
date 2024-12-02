@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 const geistSans = localFont({
@@ -28,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <div className="grid grid-cols-12">
           {/* Sidebar */}
-          <aside className="col-span-3">
+          <aside className="col-span-3 bg-gray-100">
             <Sidebar></Sidebar>
           </aside>
           {/* Main Section */}
@@ -38,7 +37,7 @@ export default function RootLayout({ children }) {
             </header>
             <main className="min-h-[calc(120vh-232px)]">
               {/* Main Section Dynamic */}
-              <section className="col-span-9 bg-green-500">
+              <section className="col-span-9">
                 {children}
               </section>
             </main>
